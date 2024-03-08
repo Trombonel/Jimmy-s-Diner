@@ -2,10 +2,12 @@
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <!-- css -->
        <link rel="stylesheet" href="index.css">
-       <!-- Fonts -->
+       <!-- Google Fonts -->
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+       <!-- Font Awesome -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     </head>
     <body>
         <header>
@@ -16,6 +18,7 @@
             </div>
         </header>
         <main>
+            <h5 class="discount-alert">10% discount on purchases of at least $50</h5>
             <div id="menu">
                 <!-- feedHtml -->
             </div>
@@ -31,13 +34,24 @@
                 <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
             </div>
             <form id="payment-form" class="hidden">
+                <button class="close-form-btn" id="close-form-btn">x</button>
                 <label for="cardDetails">Enter card details</label>
-                <input type="text" name="cardDetails" id="" placeholder="Enter your name" required>
-                <input type="number" name="cardDetails" id="" placeholder="Enter card number" required>
-                <input type="number" name="cardDetails" id="" placeholder="Enter CVV" required>
+                <input type="text" name="cardDetails" id="form-name" placeholder="Enter your name" required>
+                <input type="number" name="cardDetails" placeholder="Enter card number" required>
+                <input type="number" name="cardDetails" placeholder="Enter CVV" required>
                 <button type="submit" class="payBtn">Pay</button>
             </form>
-            <h2 id="thanks-message" class="hidden">Thanks, Names! Your order is on its way!</h2>
+            <div id="thanks-message" class="thanks-message hidden">
+                <h3 class="thanks-message-name"></h3>
+                <h3>Rate your experience</h3>
+                <div class="rating" id="rating">
+                    <i id="star" class="rating__star far fa-star"></i>
+                    <i id="star" class="rating__star far fa-star"></i>
+                    <i id="star" class="rating__star far fa-star"></i>
+                    <i id="star" class="rating__star far fa-star"></i>
+                    <i id="star" class="rating__star far fa-star"></i>
+                </div>
+            </div>
         </main>
 	    <script src="index.js" type="module" ></script>
     </body>
